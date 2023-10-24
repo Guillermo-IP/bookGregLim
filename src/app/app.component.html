@@ -1,3 +1,6 @@
 <h1>{{title}}</h1>
+<!-- <img src="{{imageURL}}" alt=""> -->
+<app-products></app-products>
 
+<button mat-raised-button [disabled]="!isValid"  color="primary" (click)="onClick($event)">Submit</button>
 <router-outlet></router-outlet>
