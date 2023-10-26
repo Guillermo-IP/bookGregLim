@@ -1,24 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.css']
 })
-export class RatingComponent {
-  icono1 = 'star_border'
-  color1 = 'basic'
-  icono2 = 'star_border'
-  color2 = 'basic'
-  icono3 = 'star_border'
-  color3 = 'basic'
-  icono4 = 'star_border'
-  color4 = 'basic'
-  icono5 = 'star_border'
-  color5 = 'basic'
-  rating = 0
-  onClick(ratingVal:number){
-    this.rating = ratingVal
+export class RatingComponent implements OnInit {
+  @Input('rating-value') rating = 0;
+  @Input() numOfReviews=0;
+
+  icono1 = 'star_border';
+  color1 = 'basic';
+  icono2 = 'star_border';
+  color2 = 'basic';
+  icono3 = 'star_border';
+  color3 = 'basic';
+  icono4 = 'star_border';
+  color4 = 'basic';
+  icono5 = 'star_border';
+  color5 = 'basic';
+  constructor(){
+  };
+
+  ngOnInit(){
+      console.log(this.rating)
+  
     if (this.rating >= 1){
       this.icono1 = 'star_rate'
       this.color1 = 'accent'
@@ -62,4 +68,8 @@ export class RatingComponent {
       this.color5 = 'basic'      
     }
   }
-}
+
+   onClick(valor:number){
+
+   }
+ }

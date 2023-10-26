@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductService } from './products/product.service';
+import { ProductService } from './product/product.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,5 @@ import { ProductService } from './products/product.service';
 })
 export class AppComponent {
   title = 'miProyecto; empezamos...';
-  imageURL = "../assets/f40.jpeg";
-  isValid = true;
-  onClick($event:any){
-    console.log("Botón clickado", $event)
-  }
+
 }

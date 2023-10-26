@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{data.productName}}</mat-card-title>
+        <img mat-card-sm-image src={{data.imageUrl}} >
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+        {{data.description}}
+        <br>
+        <br>
+        <app-rating [rating-value] = "data.rating" [numOfReviews] = "data.numOfReviews"></app-rating>
+        <br>
+        <br>
+        
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-footer>{{data.releasedDate}}</mat-card-footer>
+  </mat-card>
